@@ -1,0 +1,1 @@
+const gameTitle = 'Spot the Difference'

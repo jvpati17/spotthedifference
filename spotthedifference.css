@@ -1,0 +1,63 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+hr {
+    width: 500px;
+    height: 2px;
+
+    background-color: lightpink;
+}
+
+#board {
+    width: 450;
+    height: 450;
+
+    background-color: lightpink;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#start-button {
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    margin: 10px;
+}
+
+#player-score {
+    align-items: center;
+    background-color: lightpink;
+    width: 40px;
+    height: 20px;
+}
+
+#try-again {
+    font-family:'Times New Roman', Times, serif;
+    align-items: center;
+}
+
+.tile {
+    width: 147px;
+    height: 147px;
+
+    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontal-line {
+    border-bottom: 3px solid black;
+}
+
+.vertical-line {
+    border-right: 3px solid black;
+}
+
+.winner {
+    background-color: grey;
+    color: red;
+}
