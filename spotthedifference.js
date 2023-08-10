@@ -1,24 +1,23 @@
+
+
+/*----- constants -----*/
+
 const gameTitle = 'Spot the Difference';
 
 const startButton = document.getElementById('start-button').style.display = 'none';
-let playerScore = document.getElementById('player-score').style.display = 'none';
-let board = document.getElementById('board').style.display = 'none';
-let board2 = document.getElementById('boardTwo').style.display = 'none';
-let board3 = document.getElementById('boardThree').style.display = 'none';
+const playerScore = document.getElementById('player-score').style.display = 'none';
+const board = document.getElementById('board').style.display = 'none';
+const board2 = document.getElementById('boardTwo').style.display = 'none';
+const board3 = document.getElementById('boardThree').style.display = 'none';
 const tryAgain = document.getElementById('try-again').style.display = 'none';
+const roundTwoButton = document.getElementById('round-2').style.display = 'none';
+const roundThreeButton = document.getElementById('round-3').style.display = 'none';
 
-
-
-let roundTwoButton = document.getElementById('round-2').style.display = 'none';
-let roundThreeButton = document.getElementById('round-3').style.display = 'none';
+/*----- functions -----*/
 
 function secretStart() {
     document.getElementById('start-button').style.display = 'inline';
 }
-
-
-
-
 
     function hideBoard() {
         document.getElementById('board').style.display = 'grid';
@@ -37,7 +36,7 @@ function secretStart() {
 
         } 
 
-        function wrongCell() {
+    function wrongCell() {
             document.getElementById('wrong-answer').innerHTML = 'Wrong Answer';
             document.getElementById('player-score').style.display = 'none';
             document.getElementById('board').style.display = 'none';
@@ -45,7 +44,6 @@ function secretStart() {
             document.getElementById('start-button').style.display = 'none';
             document.getElementById('round-2').style.display = 'none';
         
-
         }
 
         function boardTwo() {
