@@ -13,6 +13,19 @@ const tryAgain = document.getElementById('try-again').style.display = 'none';
 const roundTwoButton = document.getElementById('round-2').style.display = 'none';
 const roundThreeButton = document.getElementById('round-3').style.display = 'none';
 
+/*----- (button) eventlisteners -----*/
+
+document.getElementById("secret-start").addEventListener('click', secretStart)
+document.getElementById('start-button').addEventListener('click', hideBoard)
+document.getElementById('round-2').addEventListener('click', boardTwo)
+document.getElementById('round-3').addEventListener('click', boardThree)
+
+/*----- (cell) eventlisteners -----*/
+
+document.getElementById('winning-cell').addEventListener('click', changeColor)
+document.getElementById('winning-cell-2').addEventListener('click', winningCell2)
+document.getElementById('winning-cell-3').addEventListener('click', winningCell3)
+
 /*----- functions -----*/
 
 function secretStart() {
