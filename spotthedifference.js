@@ -34,6 +34,8 @@ const roundThreeButton = document.getElementById('round-3').style.display = 'non
 //})
 
 document.getElementById('board').addEventListener('click', handleClick)
+document.getElementById('boardTwo').addEventListener('click', handleClick)
+document.getElementById('boardThree').addEventListener('click', handleClick)
 
 /*----- (button) eventlisteners -----*/
 
