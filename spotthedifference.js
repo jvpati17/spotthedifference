@@ -33,6 +33,8 @@ const roundThreeButton = document.getElementById('round-3').style.display = 'non
     //cell.addEventListener('click', wrongCell)
 //})
 
+document.getElementById('board').addEventListener('click', handleClick)
+
 /*----- (button) eventlisteners -----*/
 
 document.getElementById("secret-start").addEventListener('click', secretStart)
@@ -40,15 +42,25 @@ document.getElementById('start-button').addEventListener('click', hideBoard)
 document.getElementById('round-2').addEventListener('click', boardTwo)
 document.getElementById('round-3').addEventListener('click', boardThree)
 
-/*----- (cell) eventlisteners -----*/
+/*----- (winning cell) eventlisteners -----*/
 
-document.getElementById('winning-cell').addEventListener('click', changeColor)
+//document.getElementById('winning-cell').addEventListener('click', changeColor)
 document.getElementById('winning-cell-2').addEventListener('click', winningCell2)
 document.getElementById('winning-cell-3').addEventListener('click', winningCell3)
 
 //document.querySelectorAll('cell').addEventListener('click', wrongCell)
 
 /*----- functions -----*/
+
+function handleClick(evt) {
+    console.log(evt);
+    if (evt.target.id === 'winning-cell') {
+        changeColor()
+    } else if (evt.target.className === 'cell') {
+        wrongCell()
+    }
+
+}
 
 function secretStart() {
     document.getElementById('start-button').style.display = 'inline';
@@ -62,9 +74,11 @@ function secretStart() {
     }
 
     function changeColor() {
-        document.getElementById('winning-cell').innerHTML = 'Correct!';
+        //document.getElementById('winning-cell').innerHTML = 'Correct!';
+        document.getElementById('message').innerHTML = 'Correct';
         document.getElementById('winning-cell').style.backgroundColor = 'white';
-        document.getElementById('board').style.backgroundColor = 'white';
+       // document.getElementById('board').style.backgroundColor = 'white';
+        document.getElementById('board').style.display = 'none';
         document.getElementById('round-2').style.display = 'inline';
         document.getElementById('start-button').style.display = 'none';
         document.getElementById('player-score').innerHTML = 'Score 1/3';
@@ -85,6 +99,7 @@ function secretStart() {
             document.getElementById('board').style.display = 'none';
             document.getElementById('round-2').style.display = 'none';
             document.getElementById('boardTwo').style.display = 'grid';
+            document.getElementById('message').innerHTML = 'Spot the Difference';
         }
 
         function wrongCell2() {
@@ -95,14 +110,17 @@ function secretStart() {
         
         }
         function winningCell2() {
-            document.getElementById('winning-cell-2').innerHTML = 'Correct!';
-            document.getElementById('winning-cell-2').style.backgroundColor = 'white';
-            document.getElementById('boardTwo').style.backgroundColor = 'white';
+            //document.getElementById('winning-cell-2').innerHTML = 'Correct!';
+            document.getElementById('message').innerHTML = 'Correct';
+            //document.getElementById('winning-cell-2').style.backgroundColor = 'white';
+            //document.getElementById('boardTwo').style.backgroundColor = 'white';
+            document.getElementById('boardTwo').style.display = 'none';
             document.getElementById('round-3').style.display = 'inline';
             document.getElementById('player-score').innerHTML = 'Score 2/3';
         }
 
         function boardThree() {
+            document.getElementById('message').innerHTML = 'Spot the Difference';
             document.getElementById('boardTwo').style.display = 'none';
             document.getElementById('round-3').style.display = 'none';
             document.getElementById('boardThree').style.display = 'grid';
