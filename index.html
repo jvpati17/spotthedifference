@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <title>Spot the Difference</title>
+
+        <link rel="stylesheet" href="spotthedifference.css">
+        <script defer src="spotthedifference.js"></script>
+    </head>
+
+    <body>
+        <h1 id="message">Sp<button id="secret-start" onclick="secretStart()">o</button>t the Difference</h1>
+    
+        <hr>
+        <h2>
+            <button id="start-button" onclick="hideBoard()">Start</button>
+        <button id="round-2" onclick="boardTwo()">Round Two</button>
+        <button id="round-3" onclick="boardThree()">Round Three</button>
+    </h2>
+    <h3 id="wrong-answer"></h3>
+    <h4 id="player-score"></h4>
+        
+        
+        <br>
+        
+        <nav id="board">
+            
+            <div id="winning-cell" onclick="changeColor()"></div>
+            <div class="cell" onclick="wrongCell()"></div>
+            <div class="cell" onclick="wrongCell()"></div>
+            <div class="cell" onclick="wrongCell()"></div>
+            <div class="cell" onclick="wrongCell()"></div>
+            <div class="cell" onclick="wrongCell()"></div>
+            <div class="cell" onclick="wrongCell()"></div>
+            <div class="cell" onclick="wrongCell()"></div>
+            <div class="cell" onclick="wrongCell()"></div>
+            
+        </nav>
+        <nav id="boardTwo">
+            
+            <div class="cell2" onclick="wrongCell2()"></div>
+            <div class="cell2" onclick="wrongCell2()"></div>
+            <div class="cell2" onclick="wrongCell2()"></div>
+            <div class="cell2" onclick="wrongCell2()"></div>
+            <div class="cell2" onclick="wrongCell2()"></div>
+            <div class="cell2" onclick="wrongCell2()"></div>
+            <div id="winning-cell-2" onclick="winningCell2()"></div>
+            <div class="cell2" onclick="wrongCell2()"></div>
+            <div class="cell2" onclick="wrongCell2()"></div>
+            
+        </nav>
+
+        <nav id="boardThree">
+            
+            <div class="cell3" onclick="wrongCell3()"></div>
+            <div class="cell3" onclick="wrongCell3()"></div>
+            <div id="winning-cell-3" onclick="winningCell3()"></div>
+            <div class="cell3" onclick="wrongCell3()"></div>
+            <div class="cell3" onclick="wrongCell3()"></div>
+            <div class="cell3" onclick="wrongCell3()"></div>
+            <div class="cell3" onclick="wrongCell3()"></div>
+            <div class="cell3" onclick="wrongCell3()"></div>
+            <div class="cell3" onclick="wrongCell3()"></div>
+            
+        </nav>
+
+        <footer><button id="try-again" onclick="window.location.reload();">try again</button></footer>
+    </body>
+</html>

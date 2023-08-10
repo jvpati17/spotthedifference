@@ -1,6 +1,7 @@
 body {
     font-family:'Times New Roman', Times, serif;
     text-align: center;
+    align-items: center;
 }
 
 hr {
@@ -10,15 +11,93 @@ hr {
     background-color: lightpink;
 }
 
+#secret-start {
+    border: none;
+    font-family:'Times New Roman', Times, serif;
+    background-color: white;
+    font-size: 32;
+    font-style: bold;
+    padding: 0;
+    color: red;
+
+}
+
 #board {
     width: 450;
     height: 450;
-
-    background-color: lightpink;
-
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 3fr 3fr 3fr;
+    background-color: lightpink; 
+    border: 3px solid black;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+
+}
+
+.cell {
+    display: grid;
+    border: 5px solid;
+}
+
+#winning-cell {
+    background-color: green;
+    border: 5px solid;
+}
+
+#boardTwo {
+    width: 450;
+    height: 450;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 3fr 3fr 3fr;
+    background-color: blue; 
+    border: 3px solid black;
+    margin: 0 auto;
+    display: grid;
+
+}
+
+.cell2 {
+    display: grid;
+    border: 5px solid;
+}
+
+#winning-cell-2 {
+    background-color: purple;
+    border: 5px solid;
+}
+
+#round-2 {
+    font-family:'Times New Roman', Times, serif;
+    align-items: center;
+    margin: 10px;
+}
+
+#boardThree {
+    width: 450;
+    height: 450;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 3fr 3fr 3fr;
+    background-color: yellow; 
+    border: 3px solid black;
+    margin: 0 auto;
+    display: grid;
+
+}
+
+.cell3 {
+    display: grid;
+    border: 5px solid;
+}
+
+#winning-cell-3 {
+    background-color: brown;
+    border: 5px solid;
+}
+
+#round-3 {
+    font-family:'Times New Roman', Times, serif;
+    align-items: center;
+    margin: 10px;
 }
 
 #start-button {
@@ -30,8 +109,10 @@ hr {
 #player-score {
     align-items: center;
     background-color: lightpink;
-    width: 40px;
+    width: 100px;
     height: 20px;
+    margin: 10px;
+    border: 1px solid;
 }
 
 #try-again {
@@ -39,7 +120,7 @@ hr {
     align-items: center;
 }
 
-.tile {
+/*.cell {
     width: 147px;
     height: 147px;
 
@@ -60,4 +141,4 @@ hr {
 .winner {
     background-color: grey;
     color: red;
-}
+} */
