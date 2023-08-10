@@ -45,8 +45,8 @@ document.getElementById('round-3').addEventListener('click', boardThree)
 /*----- (winning cell) eventlisteners -----*/
 
 //document.getElementById('winning-cell').addEventListener('click', changeColor)
-document.getElementById('winning-cell-2').addEventListener('click', winningCell2)
-document.getElementById('winning-cell-3').addEventListener('click', winningCell3)
+//document.getElementById('winning-cell-2').addEventListener('click', winningCell2)
+//document.getElementById('winning-cell-3').addEventListener('click', winningCell3)
 
 //document.querySelectorAll('cell').addEventListener('click', wrongCell)
 
@@ -58,6 +58,24 @@ function handleClick(evt) {
         changeColor()
     } else if (evt.target.className === 'cell') {
         wrongCell()
+    }
+
+}
+function handleClick(evt) {
+    console.log(evt);
+    if (evt.target.id === 'winning-cell-2') {
+        boardTwo()
+    } else if (evt.target.className === 'cell2') {
+        wrongCell2()
+    }
+
+}
+function handleClick(evt) {
+    console.log(evt);
+    if (evt.target.id === 'winning-cell-3') {
+        boardThree()
+    } else if (evt.target.className === 'cell3') {
+        wrongCell3()
     }
 
 }
