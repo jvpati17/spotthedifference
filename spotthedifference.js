@@ -13,6 +13,26 @@ const tryAgain = document.getElementById('try-again').style.display = 'none';
 const roundTwoButton = document.getElementById('round-2').style.display = 'none';
 const roundThreeButton = document.getElementById('round-3').style.display = 'none';
 
+//const celldivs = document.getElementById('board')
+
+
+//let cell = document.getElementById('board')
+//cell.querySelectorAll('#board > #cell')
+//document.querySelectorAll('#cell').addEventListener('click', wrongCell)
+//document.querySelectorAll('#cell').addEventListener('click', wrongCell)
+
+
+//board = getElementById('cell') {
+   //let board.querySelectorAll('cell').addEventListener(click, wrongCell)
+//}
+
+
+//let cell = document.querySelectorAll('cell')
+
+//cell.forEach((cell) => {
+    //cell.addEventListener('click', wrongCell)
+//})
+
 /*----- (button) eventlisteners -----*/
 
 document.getElementById("secret-start").addEventListener('click', secretStart)
@@ -25,6 +45,8 @@ document.getElementById('round-3').addEventListener('click', boardThree)
 document.getElementById('winning-cell').addEventListener('click', changeColor)
 document.getElementById('winning-cell-2').addEventListener('click', winningCell2)
 document.getElementById('winning-cell-3').addEventListener('click', winningCell3)
+
+//document.querySelectorAll('cell').addEventListener('click', wrongCell)
 
 /*----- functions -----*/
 
