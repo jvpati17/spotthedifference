@@ -13,11 +13,24 @@ const tryAgain = document.getElementById('try-again').style.display = 'none';
 const roundTwoButton = document.getElementById('round-2').style.display = 'none';
 const roundThreeButton = document.getElementById('round-3').style.display = 'none';
 
+const bonusButton = document.getElementById('bonus-message').style.display = 'none';
+const bonusBoard1 = document.getElementById('bonusBoardOne').style.display = 'none';
+const bonusBoard2 = document.getElementById('bonusBoardTwo').style.display = 'none';
+const bonusBoard3 = document.getElementById('bonusBoardThree').style.display = 'none';
+const bonusBoard4 = document.getElementById('bonusBoardFour').style.display = 'none';
+const bonusButton2 = document.getElementById('bonus-round-2').style.display = 'none';
+const bonusButton3 = document.getElementById('bonus-round-3').style.display = 'none';
+const bonusButton4 = document.getElementById('bonus-round-4').style.display = 'none';
+
 /*----- eventlisteners -----*/
 
 document.getElementById('boardOne').addEventListener('click', handleClick)
 document.getElementById('boardTwo').addEventListener('click', handleClick)
 document.getElementById('boardThree').addEventListener('click', handleClick)
+document.getElementById('bonusBoardOne').addEventListener('click', handleClick)
+document.getElementById('bonusBoardTwo').addEventListener('click', handleClick)
+
+
 
 /*----- (button) eventlisteners -----*/
 
@@ -25,6 +38,17 @@ document.getElementById("secret-start").addEventListener('click', secretStart)
 document.getElementById('round-1').addEventListener('click', boardOne)
 document.getElementById('round-2').addEventListener('click', boardTwoF)
 document.getElementById('round-3').addEventListener('click', boardThree)
+
+/*----- bonus buttons -----*/
+
+document.getElementById('bonus-button').addEventListener('click', bonusOne)
+
+//need to add functions
+document.getElementById('bonus-round-2').addEventListener('click', bonusTwo)
+//const bonusButton3 = document.getElementById('bonus-round-3').addEventListener('click', bonusOne)
+//const bonusButton4 = document.getElementById('bonus-round-4').addEventListener('click', bonusOne)
+
+
 
 /*----- functions -----*/
 
@@ -45,7 +69,18 @@ function handleClick(evt) {
         winningCell3()
     } else if (evt.target.className === 'cell3') {
         wrongCell3()
-    }
+    } 
+    if (evt.target.id === 'winning-cell-4') {
+        winningCell4()
+    } else if (evt.target.className === 'cell4') {
+        wrongCell4()
+    } 
+    if (evt.target.id === 'winning-cell-5') {
+        winningCell5()
+    } else if (evt.target.className === 'cell5') {
+        wrongCell5()
+    } 
+
 
 }
 
@@ -78,6 +113,26 @@ function boardThree() {
     document.getElementById('boardThree').style.display = 'grid';
 }
 
+function bonusOne() {
+    document.getElementById('message').innerHTML = 'Color Blind?';
+    const bonusBoard1 = document.getElementById('bonusBoardOne').style.display = 'grid';
+    document.getElementById('boardTwo').style.display = 'none';
+    document.getElementById('round-3').style.display = 'none';
+    document.getElementById('boardThree').style.display = 'none';
+    document.getElementById('bonus-message').style.display = 'none';
+    document.getElementById('try-again').style.display = 'none';
+}
+function bonusTwo() {
+    document.getElementById('message').innerHTML = 'Cat';
+    document.getElementById('bonusBoardTwo').style.display = 'grid';
+    document.getElementById('boardTwo').style.display = 'none';
+    document.getElementById('round-3').style.display = 'none';
+    document.getElementById('boardThree').style.display = 'none';
+    document.getElementById('bonus-message').style.display = 'none';
+    document.getElementById('try-again').style.display = 'none';
+    document.getElementById('bonus-round-2').display = 'inline'
+}
+
     function winningCell() {
         console.log('hi')
         document.getElementById('message').innerHTML = 'Correct';
@@ -97,12 +152,13 @@ function boardThree() {
         }
 
         function winningCell3() {
-            document.getElementById('message').innerHTML = 'You win!';
+            document.getElementById('message').innerHTML = 'Congrats, you won';
             document.getElementById('boardThree').style.display = 'none';
             document.getElementById('winning-cell-3').style.backgroundColor = 'white';
             document.getElementById('boardThree').style.backgroundColor = 'white';
             document.getElementById('try-again').style.display ='inline';
             document.getElementById('player-score').innerHTML = 'Score 3/3';
+            document.getElementById('bonus-message').style.display = 'inline';
         }
 
         function wrongCell() {
@@ -127,5 +183,45 @@ function boardThree() {
             document.getElementById('try-again').style.display ='inline';
             document.getElementById('boardThree').style.display = 'none';
         
+        }
+
+        function winningCell4() {
+            document.getElementById('message').innerHTML = 'Spot the Difference';
+            document.getElementById('boardThree').style.display = 'none';
+            document.getElementById('winning-cell-3').style.backgroundColor = 'white';
+            document.getElementById('boardThree').style.backgroundColor = 'white';
+            document.getElementById('try-again').style.display ='none';
+            document.getElementById('player-score').innerHTML = 'Score 4/3';
+            document.getElementById('bonus-message').style.display = 'none';
+            document.getElementById('bonusBoardOne').style.display = 'none';
+            document.getElementById('bonusBoardTwo').style.display = 'grid';
+        }
+        function wrongCell4() {
+            document.getElementById('wrong-answer').innerHTML = 'Wrong Answer';
+            document.getElementById('player-score').style.display = 'none';
+            document.getElementById('try-again').style.display ='inline';
+            document.getElementById('boardThree').style.display = 'none';
+            document.getElementById('bonusBoardOne').style.display = 'none';
+            document.getElementById('message').style.display = 'none';
+        }
+        function winningCell5() {
+            document.getElementById('message').innerHTML = 'You win';
+            document.getElementById('boardThree').style.display = 'none';
+            document.getElementById('winning-cell-3').style.backgroundColor = 'white';
+            document.getElementById('boardThree').style.backgroundColor = 'white';
+            document.getElementById('try-again').style.display ='none';
+            document.getElementById('player-score').innerHTML = 'Score 4/3';
+            document.getElementById('bonus-message').style.display = 'none';
+            document.getElementById('bonusBoardOne').style.display = 'none';
+            document.getElementById('bonusBoardTwo').style.display = 'none';
+        }
+        function wrongCell5() {
+            document.getElementById('wrong-answer').innerHTML = 'Its French';
+            document.getElementById('player-score').style.display = 'none';
+            document.getElementById('try-again').style.display ='inline';
+            document.getElementById('boardThree').style.display = 'none';
+            document.getElementById('bonusBoardOne').style.display = 'none';
+            document.getElementById('message').style.display = 'none';
+            document.getElementById('bonusBoardTwo').style.display = 'none';
         }
         

@@ -10,12 +10,15 @@
 
     <body>
         <h1 id="message">Sp<button id="secret-start">o</button>t the Difference</h1>
-    
+    <h1 id="bonus-message">Spot the <button id="bonus-button">Difference</button>!</h1>
         <hr>
         <h2>
             <button id="round-1">Start</button>
         <button id="round-2">Round Two</button>
         <button id="round-3">Round Three</button>
+        <button id="bonus-round-2">Bonus Round Two</button>
+        <button id="bonus-round-3">Bonus Round Three</button>
+        <button id="bonus-round-4">Bonus Round Four</button>
     </h2>
     <h3 id="wrong-answer"></h3>
     <h4 id="player-score"></h4>
@@ -64,6 +67,64 @@
             <div class="cell3"></div>
             
         </nav>
+
+        <nav id="bonusBoardOne">
+            
+            <div class="cell4"></div>
+            <div class="cell4"></div>
+            <div class="cell4"></div>
+            <div class="cell4"></div>
+            <div class="cell4"></div>
+            <div class="cell4"></div>
+            <div id="winning-cell-4"></div>
+            <div class="cell4"></div>
+            <div class="cell4"></div>
+            
+        </nav>
+
+        <nav id="bonusBoardTwo">
+            
+            <div class="cell5">gato</div>
+            <div class="cell5">muur</div>
+            <div id="winning-cell-5">chien</div>
+            <div class="cell5">kot</div>
+            <div class="cell5">katt</div>
+            <div class="cell5">mao</div>
+            <div class="cell5">chat</div>
+            <div class="cell5">pusa</div>
+            <div class="cell5">neko</div>
+            
+        </nav>
+        <nav id="bonusBoardThree">
+            
+            <div class="cell6"></div>
+            <div class="cell6"></div>
+            <div id="winning-cell-6"></div>
+            <div class="cell6"></div>
+            <div class="cell6"></div>
+            <div class="cell6"></div>
+            <div class="cell6"></div>
+            <div class="cell6"></div>
+            <div class="cell6"></div>
+            
+        </nav>
+        <nav id="bonusBoardFour">
+            
+            <div class="cell7"></div>
+            <div class="cell7"></div>
+            <div id="winning-cell-7"></div>
+            <div class="cell7"></div>
+            <div class="cell7"></div>
+            <div class="cell7"></div>
+            <div class="cell7"></div>
+            <div class="cell7"></div>
+            <div class="cell7"></div>
+            
+        </nav>
+        
+
+
+
 
         <footer><button id="try-again" onclick="window.location.reload();">play again</button></footer>
     </body>

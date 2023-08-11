@@ -98,6 +98,96 @@ hr {
     border: 5px solid;
 }
 
+#bonusBoardOne {
+    width: 450;
+    height: 450;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 3fr 3fr 3fr;
+    background-color: rgb(63, 124, 89); 
+    border: 3px solid black;
+    margin: 0 auto;
+    display: grid;
+
+}
+
+.cell4 {
+    display: grid;
+    border: 5px solid;
+}
+
+#winning-cell-4 {
+    background-color: rgb(143, 93, 68);
+    border: 5px solid;
+}
+#bonusBoardTwo {
+    width: 450;
+    height: 450;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 3fr 3fr 3fr;
+    background-color: rgb(253, 253, 253); 
+    border: 3px solid black;
+    margin: 0 auto;
+    display: grid;
+
+}
+
+.cell5 {
+    display: grid;
+    border: 5px solid;
+}
+
+#winning-cell-5 {
+    background-color: rgb(252, 252, 252);
+    border: 5px solid;
+}
+#bonusBoardThree {
+    width: 450;
+    height: 450;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 3fr 3fr 3fr;
+    background-color: rgb(63, 124, 89); 
+    border: 3px solid black;
+    margin: 0 auto;
+    display: grid;
+
+}
+
+.cell6 {
+    display: grid;
+    border: 5px solid;
+}
+
+#winning-cell-6 {
+    background-color: rgb(143, 93, 68);
+    border: 5px solid;
+}
+#bonusBoardFour {
+    width: 450;
+    height: 450;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 3fr 3fr 3fr;
+    background-color: rgb(63, 124, 89); 
+    border: 3px solid black;
+    margin: 0 auto;
+    display: grid;
+
+}
+
+.cell7 {
+    display: grid;
+    border: 5px solid;
+}
+
+#winning-cell-7 {
+    background-color: rgb(143, 93, 68);
+    border: 5px solid;
+}
+
+
+
+
+
+
 #round-3 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 35;
@@ -128,6 +218,42 @@ hr {
 }
 
 #try-again {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35;
+    color: rgb(96, 58, 58);
+    align-items: center;
+    margin: 10px;
+    border: 1;
+    background-color: white;
+}
+#bonus-button {
+    border: none;
+    font-family:'Times New Roman', Times, serif;
+    background-color: white;
+    font-size: 32;
+    font-style: bold;
+    padding: 0;
+    color: rgb(0, 0, 0);
+}
+#bonus-round-2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35;
+    color: rgb(96, 58, 58);
+    align-items: center;
+    margin: 10px;
+    border: 1;
+    background-color: white;
+}
+#bonus-round-3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35;
+    color: rgb(96, 58, 58);
+    align-items: center;
+    margin: 10px;
+    border: 1;
+    background-color: white;
+}
+#bonus-round-4 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 35;
     color: rgb(96, 58, 58);
