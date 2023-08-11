@@ -21,7 +21,7 @@ hr {
 
 }
 
-#board {
+#boardOne {
     width: 450;
     height: 450;
     grid-template-columns: 3fr 3fr 3fr;
@@ -108,7 +108,7 @@ hr {
     background-color: white;
 }
 
-#start-button {
+#round-1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 35;
     color: rgb(96, 58, 58);
