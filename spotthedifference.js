@@ -164,7 +164,7 @@ function bonusTwo() {
         function wrongCell() {
             document.getElementById('wrong-answer').innerHTML = 'Wrong Answer';
             document.getElementById('player-score').style.display = 'none';
-            //document.getElementById('board').style.display = 'none';
+            document.getElementById('boardOne').style.display = 'none';
             document.getElementById('try-again').style.display = 'inline';
             document.getElementById('round-1').style.display = 'none';
             document.getElementById('round-2').style.display = 'none';
