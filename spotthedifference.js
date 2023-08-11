@@ -13,29 +13,10 @@ const tryAgain = document.getElementById('try-again').style.display = 'none';
 const roundTwoButton = document.getElementById('round-2').style.display = 'none';
 const roundThreeButton = document.getElementById('round-3').style.display = 'none';
 
-//const celldivs = document.getElementById('board')
-
-
-//let cell = document.getElementById('board')
-//cell.querySelectorAll('#board > #cell')
-//document.querySelectorAll('#cell').addEventListener('click', wrongCell)
-//document.querySelectorAll('#cell').addEventListener('click', wrongCell)
-
-
-//board = getElementById('cell') {
-   //let board.querySelectorAll('cell').addEventListener(click, wrongCell)
-//}
-
-
-//let cell = document.querySelectorAll('cell')
-
-//cell.forEach((cell) => {
-    //cell.addEventListener('click', wrongCell)
-//})
 
 document.getElementById('board').addEventListener('click', handleClick)
-document.getElementById('board2').addEventListener('click', handleClick)
-document.getElementById('board3').addEventListener('click', handleClick)
+document.getElementById('boardTwo').addEventListener('click', handleClick)
+document.getElementById('boardThree').addEventListener('click', handleClick)
 
 /*----- (button) eventlisteners -----*/
 
@@ -55,43 +36,37 @@ document.getElementById('round-3').addEventListener('click', boardThree)
 /*----- functions -----*/
 
 function handleClick(evt) {
-    console.log(evt);
+    console.log(evt.target.id);
     if (evt.target.id === 'winning-cell') {
         changeColor()
     } else if (evt.target.className === 'cell') {
         wrongCell()
-    }
-
-}
-function handleClick(evt) {
-    console.log(evt);
+    } 
     if (evt.target.id === 'winning-cell-2') {
-        boardTwo()
+        console.log('hi');
+        winningCell2()
     } else if (evt.target.className === 'cell2') {
         wrongCell2()
-    }
-
-}
-function handleClick(evt) {
-    console.log(evt);
+    } 
     if (evt.target.id === 'winning-cell-3') {
-        boardThree()
+        winningCell3()
     } else if (evt.target.className === 'cell3') {
         wrongCell3()
     }
 
 }
 
+
 function secretStart() {
     document.getElementById('start-button').style.display = 'inline';
 }
 
-    function hideBoard() {
+function hideBoard() {
         document.getElementById('board').style.display = 'grid';
         document.getElementById('start-button').style.display = 'none';
         document.getElementById('player-score').style.display = 'inline';
         document.getElementById('player-score').innerHTML = 'Score 0/3';
-    }
+}
 
     function changeColor() {
         //document.getElementById('winning-cell').innerHTML = 'Correct!';
@@ -104,6 +79,7 @@ function secretStart() {
         document.getElementById('player-score').innerHTML = 'Score 1/3';
 
         } 
+        
 
     function wrongCell() {
             document.getElementById('wrong-answer').innerHTML = 'Wrong Answer';
@@ -115,7 +91,8 @@ function secretStart() {
         
         }
 
-        function boardTwo() {
+        function boardTwo()
+         { console.log('hj')
             document.getElementById('board').style.display = 'none';
             document.getElementById('round-2').style.display = 'none';
             document.getElementById('boardTwo').style.display = 'grid';
