@@ -209,8 +209,8 @@ function bonusTwo() {
             document.getElementById('boardThree').style.display = 'none';
             document.getElementById('winning-cell-3').style.backgroundColor = 'white';
             document.getElementById('boardThree').style.backgroundColor = 'white';
-            document.getElementById('try-again').style.display ='none';
-            document.getElementById('player-score').innerHTML = 'Score 4/3';
+            document.getElementById('try-again').style.display ='inline';
+            document.getElementById('player-score').innerHTML = 'Score 5/3';
             document.getElementById('bonus-message').style.display = 'none';
             document.getElementById('bonusBoardOne').style.display = 'none';
             document.getElementById('bonusBoardTwo').style.display = 'none';
